@@ -12,6 +12,7 @@
 """
     
 import sys
+from time import time
 from sklearn.naive_bayes import GaussianNB
 
 sys.path.append("../tools/")
@@ -29,14 +30,13 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 clf = GaussianNB()
 
-import time
-t0 = time.time()
+t0 = time()
 clf = clf.fit(features_train, labels_train)
-print "training time:", round(time.time() - t0, 3), "s"
+print "training time:", round(time() - t0, 3), "s"
 
-t1 = time.time()
+t1 = time()
 pred = clf.predict(features_test)
-print "prediction time:", round(time.time() - t1, 3), "s"
+print "prediction time:", round(time() - t1, 3), "s"
 
 from sklearn.metrics import accuracy_score
 print accuracy_score(pred, labels_test)
