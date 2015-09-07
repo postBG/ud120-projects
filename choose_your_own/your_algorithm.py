@@ -31,12 +31,23 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+#from sklearn.ensemble import AdaBoostClassifier
+#clf = AdaBoostClassifier(learning_rate=0.5, n_estimators=40)
+#clf = clf.fit(features_train, labels_train)
+#print "AdaBoost Acurracy:"
+#rint clf.score(features_test, labels_test)
 
+#from sklearn.ensemble import RandomForestClassifier
+#clf = RandomForestClassifier(n_estimators = 5, min_samples_split = 5)
+#clf = clf.fit(features_train, labels_train)
+#print "Random Forest Acurracy:"
+#print clf.score(features_test, labels_test)
 
-
-
-
-
+from sklearn import svm
+clf = svm.SVC(kernel = 'rbf', C = 100000)
+clf = clf.fit(features_train, labels_train)
+print "SVM acurracy:"
+print clf.score(features_test, labels_test)
 
 try:
     prettyPicture(clf, features_test, labels_test)
