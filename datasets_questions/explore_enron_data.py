@@ -39,3 +39,34 @@ print cnt
 print enron_data['PRENTICE JAMES']['total_stock_value']
 print enron_data['COLWELL WESLEY']['from_this_person_to_poi']
 print enron_data['SKILLING JEFFREY K']['exercised_stock_options']
+
+print enron_data['LAY KENNETH L']['total_payments']
+print enron_data['FASTOW ANDREW S']['total_payments']
+print enron_data['SKILLING JEFFREY K']['total_payments']
+
+have_salary = 0
+have_email = 0
+for x in enron_data.values():
+    if x['email_address'] != 'NaN':
+        have_email += 1
+    if x['salary'] != 'NaN':
+        have_salary += 1
+
+print have_salary
+print have_email
+
+NaN_total_payments = 0
+for x in enron_data.values():
+    if x['total_payments'] == 'NaN':
+        NaN_total_payments += 1
+
+print NaN_total_payments
+print (NaN_total_payments*100.0)/m
+
+poi_NaN_total_payments = 0
+for x in enron_data.values():
+    if x['total_payments'] == 'NaN' and x['poi'] == 1:
+        poi_NaN_total_payments += 1
+
+print poi_NaN_total_payments
+print (poi_NaN_total_payments*100.0)/m
