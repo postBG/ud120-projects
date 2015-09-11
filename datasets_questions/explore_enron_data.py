@@ -22,13 +22,20 @@ m = len(enron_data) # size of data set
 print m
 
 peoples = enron_data.keys()
+print peoples
+
 n = len(enron_data[peoples[0]]) # number of features
 print n
 
 features = enron_data[peoples[0]].keys()
+print features
+
 cnt = 0 # number of poi
 for i in range(m):
     if enron_data[peoples[i]]["poi"] == 1:
         cnt += 1
 print cnt
 
+print enron_data['PRENTICE JAMES']['total_stock_value']
+print enron_data['COLWELL WESLEY']['from_this_person_to_poi']
+print enron_data['SKILLING JEFFREY K']['exercised_stock_options']
