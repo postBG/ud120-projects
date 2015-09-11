@@ -18,5 +18,17 @@
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
+m = len(enron_data) # size of data set
+print m
 
+peoples = enron_data.keys()
+n = len(enron_data[peoples[0]]) # number of features
+print n
+
+features = enron_data[peoples[0]].keys()
+cnt = 0 # number of poi
+for i in range(m):
+    if enron_data[peoples[i]]["poi"] == 1:
+        cnt += 1
+print cnt
 
