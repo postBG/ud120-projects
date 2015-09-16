@@ -44,29 +44,54 @@ data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "r")
 ### there's an outlier--remove it! 
 data_dict.pop("TOTAL", 0)
 
-
 ### the input features we want to use 
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
 feature_1 = "salary"
 feature_2 = "exercised_stock_options"
+feature_3 = "total_payments"
 poi  = "poi"
-features_list = [poi, feature_1, feature_2]
+features_list = [poi, feature_1, feature_2, feature_3]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
 
+names = data_dict.keys()
+exercised_stock_opt = featureFormat(data_dict, ['exercised_stock_options'])
+
+min = exercised_stock_opt[0][0]
+min_idx = 0
+max = exercised_stock_opt[0][0]
+max_idx = 0
+
+print names
+
+for idx in range(len(exercised_stock_opt)):
+    tmp = exercised_stock_opt[idx][0]
+    if tmp < min and tmp != 0 :
+        min = tmp
+        min_idx = idx
+    if tmp > max and tmp != 0:
+        max = tmp
+        max_idx = idx
+
+print names[max_idx]
+print names[min_idx]
+print max_idx
+print min_idx
+print exercised_stock_opt[max_idx][0]
+print exercised_stock_opt[min_idx][0]
 
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
 ### for f1, f2, _ in finance_features:
 ### (as it's currently written, line below assumes 2 features)
-for f1, f2 in finance_features:
-    plt.scatter( f1, f2 )
+for f1, f2, f3 in finance_features:
+    plt.scatter( f1, f2)
 plt.show()
 
 
 
 from sklearn.cluster import KMeans
-features_list = ["poi", feature_1, feature_2]
+features_list = ["poi", feature_1, feature_2, feature_3]
 data2 = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data2 )
 clf = KMeans(n_clusters=2)
