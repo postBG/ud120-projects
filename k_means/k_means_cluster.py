@@ -54,6 +54,8 @@ features_list = [poi, feature_1, feature_2, feature_3]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
 
+
+# Find range of exercised_stock_options
 names = data_dict.keys()
 exercised_stock_opt = featureFormat(data_dict, ['exercised_stock_options'])
 
@@ -80,6 +82,26 @@ print min_idx
 print exercised_stock_opt[max_idx][0]
 print exercised_stock_opt[min_idx][0]
 
+# Find range of salary
+salary_list = featureFormat(data_dict, ['salary'])
+
+salary_min = salary_list[0][0]
+salary_min_idx = 0
+salary_max = salary_list[0][0]
+salary_max_idx = 0
+
+for idx in range(len(salary_list)):
+    tmp = salary_list[idx][0]
+    if tmp < salary_min and tmp != 0 :
+        salary_min = tmp
+        salary_min_idx = idx
+    if tmp > salary_max and tmp != 0:
+        salary_max = tmp
+        salary_max_idx = idx
+
+print salary_list[salary_max_idx][0]
+print salary_list[salary_min_idx][0]
+
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
 ### for f1, f2, _ in finance_features:
@@ -91,7 +113,8 @@ plt.show()
 
 
 from sklearn.cluster import KMeans
-features_list = ["poi", feature_1, feature_2, feature_3]
+#features_list = ["poi", feature_1, feature_2, feature_3]
+features_list = ["poi", feature_1, feature_2]
 data2 = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data2 )
 clf = KMeans(n_clusters=2)
