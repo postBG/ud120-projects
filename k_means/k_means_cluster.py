@@ -56,51 +56,17 @@ poi, finance_features = targetFeatureSplit( data )
 
 
 # Find range of exercised_stock_options
-names = data_dict.keys()
-exercised_stock_opt = featureFormat(data_dict, ['exercised_stock_options'])
-
-min = exercised_stock_opt[0][0]
-min_idx = 0
-max = exercised_stock_opt[0][0]
-max_idx = 0
-
-print names
-
-for idx in range(len(exercised_stock_opt)):
-    tmp = exercised_stock_opt[idx][0]
-    if tmp < min and tmp != 0 :
-        min = tmp
-        min_idx = idx
-    if tmp > max and tmp != 0:
-        max = tmp
-        max_idx = idx
-
-print names[max_idx]
-print names[min_idx]
-print max_idx
-print min_idx
-print exercised_stock_opt[max_idx][0]
-print exercised_stock_opt[min_idx][0]
-
 # Find range of salary
-salary_list = featureFormat(data_dict, ['salary'])
+stock_options_list = []
+salary_list = []
+for key, value in data_dict.iteritems() :
+    if value['exercised_stock_options'] != 'NaN':
+        stock_options_list.append(value['exercised_stock_options'])
+    if value['salary'] != 'NaN':
+        salary_list.append(value['salary'])
 
-salary_min = salary_list[0][0]
-salary_min_idx = 0
-salary_max = salary_list[0][0]
-salary_max_idx = 0
-
-for idx in range(len(salary_list)):
-    tmp = salary_list[idx][0]
-    if tmp < salary_min and tmp != 0 :
-        salary_min = tmp
-        salary_min_idx = idx
-    if tmp > salary_max and tmp != 0:
-        salary_max = tmp
-        salary_max_idx = idx
-
-print salary_list[salary_max_idx][0]
-print salary_list[salary_min_idx][0]
+print min(stock_options_list), max(stock_options_list)
+print min(salary_list), max(salary_list)
 
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
@@ -109,8 +75,6 @@ print salary_list[salary_min_idx][0]
 for f1, f2, f3 in finance_features:
     plt.scatter( f1, f2)
 plt.show()
-
-
 
 from sklearn.cluster import KMeans
 #features_list = ["poi", feature_1, feature_2, feature_3]
@@ -121,9 +85,10 @@ clf = KMeans(n_clusters=2)
 pred = clf.fit_predict( finance_features )
 Draw(pred, finance_features, poi, name="clusters_before_scaling.pdf", f1_name=feature_1, f2_name=feature_2)
 
-
 ### cluster here; create predictions of the cluster labels
 ### for the data and store them to a list called pred
+#from sklearn.preprocessing import MinMaxScaler
+
 
 try:
     Draw(pred, finance_features, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
