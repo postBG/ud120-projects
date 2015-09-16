@@ -87,8 +87,10 @@ Draw(pred, finance_features, poi, name="clusters_before_scaling.pdf", f1_name=fe
 
 ### cluster here; create predictions of the cluster labels
 ### for the data and store them to a list called pred
-#from sklearn.preprocessing import MinMaxScaler
-
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+scaler.fit(finance_features)
+print scaler.transform([200000., 1000000.])
 
 try:
     Draw(pred, finance_features, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
