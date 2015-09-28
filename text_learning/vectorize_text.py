@@ -43,7 +43,8 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         #temp_counter += 1
         #if temp_counter < 200:
         path = os.path.join('C:\Users\USER\Desktop\source', path[:-1])
-        print path
+        # for make little bit fast comment this print path
+        #print path
         email = open(path, "r")
 
         ### use parseOutText to extract the text from the opened email
@@ -51,7 +52,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
 
         ### use str.replace() to remove any instances of the words
         ### ["sara", "shackleton", "chris", "germani"]
-        signatures = ["sara", "shackleton", "chris", "germani"]
+        signatures = ["sara", "shackleton", "chris", "germani", "sshacklensf"]
         for word in signatures:
             email_text = email_text.replace(word, "")
 

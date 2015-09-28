@@ -39,7 +39,6 @@ labels_train   = labels_train[:150]
 print len(features_train)
 
 from sklearn import tree
-#clf = tree.DecisionTreeClassifier(min_samples_split = 40)
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(features_train, labels_train)
 
@@ -50,5 +49,8 @@ feature_importances = clf.feature_importances_
 most_importance_value = max(feature_importances)
 most_importance_feature = numpy.argmax(feature_importances)
 
+# if importance is more than 0.2, then we will consider it as signature
+# which means it simply decides data's class
 print "most importance value: ", most_importance_value
-print "most importance feature: ", most_importance_feature
+print "most importance feature index: ", most_importance_feature
+print "most importance feature: ", vectorizer.get_feature_names()[most_importance_feature]
