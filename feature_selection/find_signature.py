@@ -49,8 +49,16 @@ feature_importances = clf.feature_importances_
 most_importance_value = max(feature_importances)
 most_importance_feature = numpy.argmax(feature_importances)
 
+feature_names = vectorizer.get_feature_names()
+signatures = []
+for i in range(len(feature_importances)):
+    if feature_importances[i] > 0.2:
+        signatures.append(feature_names[i])
+
+
 # if importance is more than 0.2, then we will consider it as signature
 # which means it simply decides data's class
 print "most importance value: ", most_importance_value
 print "most importance feature index: ", most_importance_feature
-print "most importance feature: ", vectorizer.get_feature_names()[most_importance_feature]
+print "number of signatures: ", len(signatures)
+print "signatures: ", signatures
