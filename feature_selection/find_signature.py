@@ -36,6 +36,15 @@ labels_train   = labels_train[:150]
 
 
 ### your code goes here
+print len(features_train)
 
+from sklearn import tree
+#clf = tree.DecisionTreeClassifier(min_samples_split = 40)
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features_train, labels_train)
 
+print "Accuracy on train examples:"
+print clf.score(features_train, labels_train)
 
+print "Accuracy on test examples:"
+print clf.score(features_test, labels_test)
