@@ -43,8 +43,12 @@ from sklearn import tree
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(features_train, labels_train)
 
-print "Accuracy on train examples:"
-print clf.score(features_train, labels_train)
+print "Accuracy on train examples: ", clf.score(features_train, labels_train)
+print "Accuracy on test examples: ", clf.score(features_test, labels_test)
 
-print "Accuracy on test examples:"
-print clf.score(features_test, labels_test)
+feature_importances = clf.feature_importances_
+most_importance_value = max(feature_importances)
+most_importance_feature = numpy.argmax(feature_importances)
+
+print "most importance value: ", most_importance_value
+print "most importance feature: ", most_importance_feature
