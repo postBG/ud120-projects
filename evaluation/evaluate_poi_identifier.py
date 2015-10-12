@@ -30,15 +30,28 @@ labels, features = targetFeatureSplit(data)
 from sklearn.cross_validation import train_test_split
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.3, random_state=42)
 
-poi_in_test = 0
-for i in labels_test:
-    if i == 1.0:
-        poi_in_test += 1
+poi_in_test = []
+for i in range(len(labels_test)):
+    if labels_test[i] == 1.0:
+        poi_in_test.append(i)
 
-print "the number of POIs in test set: ", poi_in_test
+print "the number of POIs in test set: ", len(poi_in_test)
 print "the number of people in test set: ", len(labels_test)
-#from sklearn import tree
-#clf = tree.DecisionTreeClassifier()
-#clf = clf.fit(features_train, labels_train)
 
+from sklearn import tree
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features_train, labels_train)
+
+true_positive = 0
+pred = clf.predict(features_test)
+for i in poi_in_test:
+    if pred[i] == 1.0:
+        true_positive += 1
+
+print "true positive: ", true_positive
+
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+print "precision score: ", precision_score(labels_test, pred)
+print "recall score: ", recall_score(labels_test, pred)
 
