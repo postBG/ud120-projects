@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="44fe0e9c-5bbc-4d2c-bdaa-88f6a7955901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evaluation/evaluate_poi_identifier.py" afterPath="$PROJECT_DIR$/evaluation/evaluate_poi_identifier.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ud120-projects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +38,7 @@
           <file leaf-file-name="dt_author_id.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/decision_tree/dt_author_id.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2881119">
+                <state vertical-scroll-proportion="0.42827442">
                   <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
                   <folding />
                 </state>
@@ -97,8 +96,8 @@
           <file leaf-file-name="evaluate_poi_identifier.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/evaluation/evaluate_poi_identifier.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8769231">
-                  <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.9334719">
+                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -210,24 +209,7 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.validate_poi">
-    <configuration default="false" name="parse_out_email_text" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ud120-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/parse_out_email_text.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.evaluate_poi_identifier">
     <configuration default="false" name="vectorize_text" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,6 +274,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ud120-projects" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/validation/validate_poi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="evaluate_poi_identifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evaluation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ud120-projects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation/evaluate_poi_identifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -419,19 +418,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.parse_out_email_text" />
-      <item index="1" class="java.lang.String" itemvalue="Python.vectorize_text" />
-      <item index="2" class="java.lang.String" itemvalue="Python.find_signature" />
-      <item index="3" class="java.lang.String" itemvalue="Python.eigenfaces" />
-      <item index="4" class="java.lang.String" itemvalue="Python.validate_poi" />
+      <item index="0" class="java.lang.String" itemvalue="Python.vectorize_text" />
+      <item index="1" class="java.lang.String" itemvalue="Python.find_signature" />
+      <item index="2" class="java.lang.String" itemvalue="Python.eigenfaces" />
+      <item index="3" class="java.lang.String" itemvalue="Python.validate_poi" />
+      <item index="4" class="java.lang.String" itemvalue="Python.evaluate_poi_identifier" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.validate_poi" />
-        <item index="1" class="java.lang.String" itemvalue="Python.eigenfaces" />
-        <item index="2" class="java.lang.String" itemvalue="Python.find_signature" />
-        <item index="3" class="java.lang.String" itemvalue="Python.vectorize_text" />
-        <item index="4" class="java.lang.String" itemvalue="Python.parse_out_email_text" />
+        <item index="0" class="java.lang.String" itemvalue="Python.evaluate_poi_identifier" />
+        <item index="1" class="java.lang.String" itemvalue="Python.validate_poi" />
+        <item index="2" class="java.lang.String" itemvalue="Python.eigenfaces" />
+        <item index="3" class="java.lang.String" itemvalue="Python.find_signature" />
+        <item index="4" class="java.lang.String" itemvalue="Python.vectorize_text" />
       </list>
     </recent_temporary>
   </component>
@@ -465,20 +464,20 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252688" sideWeight="0.50506973" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31451613" sideWeight="0.4949303" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31451613" sideWeight="0.4949303" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -855,7 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decision_tree/dt_author_id.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2881119">
+        <state vertical-scroll-proportion="0.42827442">
           <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding />
         </state>
@@ -871,8 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/evaluate_poi_identifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8769231">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.9334719">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
