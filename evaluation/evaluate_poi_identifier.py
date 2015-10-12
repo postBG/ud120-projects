@@ -36,7 +36,7 @@ for i in labels_test:
         poi_in_test += 1
 
 print "the number of POIs in test set: ", poi_in_test
-print "the number of peoples in test set: ", len(labels_test)
+print "the number of people in test set: ", len(labels_test)
 #from sklearn import tree
 #clf = tree.DecisionTreeClassifier()
 #clf = clf.fit(features_train, labels_train)
